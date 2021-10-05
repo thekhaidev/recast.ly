@@ -3,23 +3,32 @@ import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 import exampleVideoData from '../data/exampleVideoData.js';
 
-var App = () => (
-  <div>
-    <nav className="navbar">
-      <div className="col-md-6 offset-md-3">
-        <div><h5><em>Search</em></h5><Search /></div>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <nav className="navbar">
+          <div className="col-md-6 offset-md-3">
+            <div><h5><em>Search</em></h5><Search /></div>
+          </div>
+        </nav>
+        <div className="row">
+          <div className="col-md-7">
+            <div><h5><em>Video Player</em></h5><VideoPlayer video = {exampleVideoData[0]}/></div>
+          </div>
+          <div className="col-md-5">
+            <div><h5><em>Video List</em></h5><VideoList videos = {exampleVideoData}/></div>
+          </div>
+        </div>
       </div>
-    </nav>
-    <div className="row">
-      <div className="col-md-7">
-        <div><h5><em>Video Player</em></h5><VideoPlayer video = {exampleVideoData[0]}/></div>
-      </div>
-      <div className="col-md-5">
-        <div><h5><em>Video List</em></h5><VideoList videos = {exampleVideoData}/></div>
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
+
 
 
 
