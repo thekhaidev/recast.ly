@@ -14,7 +14,6 @@ class App extends React.Component {
     };
 
     this.onVideoClick = this.onVideoClick.bind(this);
-
   }
 
   componentDidMount() {
@@ -51,7 +50,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><h5><em>Search</em></h5><Search /></div>
+            <div><h5><em>Search</em></h5><Search handleSearchInputChange={this.getYouTubeVideos.bind(this)}/></div>
           </div>
         </nav>
         <div className="row">
