@@ -14,7 +14,6 @@ VideoList.propTypes = {
   videos: PropTypes.array.isRequired
 };
 
-console.log(VideoList.props);
 export default VideoList;
 
 

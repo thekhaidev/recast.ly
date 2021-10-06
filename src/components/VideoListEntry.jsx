@@ -12,7 +12,6 @@ var VideoListEntry = (props) => (
     <div className="media-body">
       <div className="video-list-entry-title" onClick={() => props.onVideoClick(props.video)}>{props.video.snippet.title}</div>
       <div className="video-list-entry-detail">{props.video.snippet.description}</div>
-      {console.log(props.video)}
     </div>
   </div>
 );

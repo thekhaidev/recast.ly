@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1 ",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
@@ -29,5 +29,4 @@
     "react-test-renderer": "^16.14.0",
     "sinon": "^9.2.1"
   }
-
 }
