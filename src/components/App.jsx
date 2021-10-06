@@ -1,14 +1,15 @@
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
-import exampleVideoData from '../data/exampleVideoData.js';
+import something from '../data/exampleVideoData.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      currentVid: exampleVideoData[0]
+      currentVid: something[0],
+      videos: something
     };
 
     this.onVideoClick = this.onVideoClick.bind(this);
@@ -40,7 +41,7 @@ class App extends React.Component {
             <div><h5><em>Video Player</em></h5><VideoPlayer video = {this.state.currentVid}/></div>
           </div>
           <div className="col-md-5">
-            <div><h5><em>Video List</em></h5><VideoList videos = {exampleVideoData} onVideoClick = {this.onVideoClick}/></div>
+            <div><h5><em>Video List</em></h5><VideoList videos = {this.state.videos} onVideoClick = {this.onVideoClick}/></div>
           </div>
         </div>
       </div>
