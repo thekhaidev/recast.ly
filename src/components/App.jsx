@@ -2,6 +2,7 @@ import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 import something from '../data/exampleVideoData.js';
+// import searchYouTube from '../lib/searchYouTube.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,11 +17,28 @@ class App extends React.Component {
 
   }
 
+  componentDidMount() {
+    this.getYouTubeVideos('cute kittens');
+  }
+
+  getYouTubeVideos(query) {
+    var options = {
+      key: this.props.API_KEY,
+      query: query
+    };
+
+    this.props.searchYouTube(options, (videos) => {
+      this.setState({
+        videos: videos,
+        currentVid: videos[0]
+      });
+    });
+  }
+
 
 
   onVideoClick(video) {
 
-    // console.log('test');
     this.setState({
       currentVid: video
     });
